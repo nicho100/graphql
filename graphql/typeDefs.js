@@ -4,7 +4,7 @@ module.exports.typeDefs = `#graphql
     username: String!
     password: String!
   }
-  input UserToAdd {//creo un input para añadir un usuario
+  input UserToAdd {//creo un input para despues insertarlo en la mutacion
     username: String!
     password: String!
   }
@@ -12,7 +12,7 @@ module.exports.typeDefs = `#graphql
     users: [User]!
     user(userId: ID!): User!
   }
-  type Mutation {
+  type Mutation {//recibo el contenido de userToAdd y lo añado
     addUser(userToAdd: UserToAdd!): User!
   }
 `;
