@@ -1,5 +1,5 @@
-const { userMutations } = require("./user/mutations");
-const { userQueries } = require("./user/queries");
+const { userMutations } = require("./users/mutations");
+const { userQueries } = require("./users/queries");
 
 module.exports.resolvers = {
   Query: {
