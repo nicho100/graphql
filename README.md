@@ -20,3 +20,17 @@ y en la parte de variables escribir
   "userId": "1",
   
 }
+para guardar un usuario
+mutation AddUser($userToAdd: UserToAdd!) {
+  addUser(userToAdd: $userToAdd) {
+    username
+    password
+  }
+}
+{
+  "userToAdd":{
+    "username":"usuario",
+    "password":"contraseña"
+  }
+  
+}
