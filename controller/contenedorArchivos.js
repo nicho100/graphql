@@ -22,7 +22,7 @@ class ContenedorArchivo{
                 info.push(object)
                 fs.writeFileSync(path,JSON.stringify(info,null,2))
                 this.id++
-                return idReturn
+                return object
             }
             catch(err){
                 console.log("error de lectura",err)
