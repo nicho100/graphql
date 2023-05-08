@@ -53,7 +53,7 @@ app.set('view engine', 'ejs')
     
 
 app.use('/api',routerRandom)//traigo las rutas implementadas
-app.use("/",routerLogins)//traigo las rutas de logeos
+app.use("/log",routerLogins)//traigo las rutas de logeos
 
 io.on('connection',async(client) => {
     //guardo todos los productos y mensajes en una variable
