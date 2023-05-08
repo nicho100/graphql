@@ -37,7 +37,7 @@ routerLogins.get("/info",compression(),(req,res)=>{//muestra el path la version 
 
 routerLogins.post('/signup',passport.authenticate("signup",{failureRedirect:"login.html"}),async (req,res)=>{//ruta para que el usuario se registre
    req.session.username=req.user.username
-  res.redirect("/datos")
+  res.redirect("/log/datos")
 })
 
 routerLogins.post('/login',passport.authenticate("login",{failureRedirect:"/login.html"}), async (req,res)=>{//ruta para que el usuario inicie sesion
@@ -45,7 +45,7 @@ routerLogins.post('/login',passport.authenticate("login",{failureRedirect:"/logi
     
     
   
-    res.redirect("/datos")
+    res.redirect("/log/datos")
 })
 
 routerLogins.get("/logout",async(req,res)=>{//ruta para cerrar sesion
