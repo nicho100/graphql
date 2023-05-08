@@ -9,3 +9,14 @@ query users {
     password
   }
 }
+para traer un usuario por id:
+query user($userId: ID!) {
+  user(userId:$userId){
+    id
+  } 
+}
+y en la parte de variables escribir 
+{
+  "userId": "1",
+  
+}
