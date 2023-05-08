@@ -3,7 +3,7 @@ const {Strategy:localStrategy}=require("passport-local")
 const{hashSync,compareSync}=require("bcrypt")
 const { getUsers, addUser } = require("../controller/user")
 const { ContenedorArchivo } = require('../controller/contenedorArchivos')
-const usuario= new ContenedorArchivo("productos")
+const usuario= new ContenedorArchivo("usuarios")
 
 passport.serializeUser(function(user,done){
     done(null,user.username)
